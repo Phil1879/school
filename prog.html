@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Програма курсу | Школа незалежної сім'ї ім. Олени Буланової</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/stile.css">
+    <style>
+        .content-section {
+            padding: 100px 0 50px;
+            min-height: 100vh;
+        }
+        
+        .back-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .back-link:hover {
+            color: #e6b825;
+        }
+        
+        .content-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--accent-color);
+            text-align: center;
+        }
+        
+        .module-header {
+            display: flex;
+            align-items: center;
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+        
+        .circle-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .module-title {
+            font-size: 1.6rem;
+            margin: 0;
+            color: var(--accent-color);
+        }
+        
+        .content-section p {
+            margin-bottom: 1.2rem;
+            line-height: 1.7;
+            text-align: justify;
+        }
+        
+        .content-section ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .content-section li {
+            margin-bottom: 0.7rem;
+            line-height: 1.6;
+        }
+        
+        .content-section strong {
+            color: var(--accent-color);
+        }
+        
+        .highlight-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .content-section {
+                padding: 80px 0 30px;
+            }
+            
+            .content-section h1 {
+                font-size: 2rem;
+            }
+            
+            .module-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .circle-number {
+                margin-bottom: 10px;
+            }
+            
+            .module-title {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Навігаційна панель -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Школа незалежної сім'ї <span class="accent-text">ім. Олени Буланової</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Головна</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contacts">Контакти</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Про співзалежність</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="program.html">Структура курсу</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="form.html" class="btn btn-accent">Реєстрація</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Секція з контентом -->
+    <section class="content-section">
+        <div class="container">
+            <a href="index.html" class="back-link">
+                <i class="bi bi-arrow-left me-2"></i> Назад на головну
+            </a>
+            
+            <div class="content-container">
+                <h1>Програма курсу</h1>
+                
+                <div class="module-header">
+                    <div class="circle-number">1</div>
+                    <h2 class="module-title">Співзалежність та її симптоми</h2>
+                </div>
+                <p>У цьому розділі ви дізнаєтесь що таке співзалежність, як вона проявляється у різних контекстах вашого життя а також про інші види залежностей. Нехай не завжди, але часто вони йдуть пліч-о-пліч, тому важливо чітко розуміти їхні загальні особливості та відмінності.</p>
+                <p>У цій частині ви знайдете тест для оцінки свого поточного рівня співзалежності (після того, як ви пройдете курс, ми рекомендуємо вам знову пройти тест, щоб побачити прогрес).</p>
+                
+                <div class="module-header">
+                    <div class="circle-number">2</div>
+                    <h2 class="module-title">Самоаналіз та цілі</h2>
+                </div>
+                <p>У другій частині ми вдамося до самоаналізу і для початку поміркуємо, який стан справ у вашому житті зараз и чого б ви хотіли досягти, працюючи з цим курсом.</p>
+                <p>Потрібно буде скласти уявлення про своє життя після відновлення. Наприклад, згадати свої великі мрії і, як їх відображення, довгострокові цілі. Адже те, чого ви хочете від життя, невід'ємна частина вашої автентичності. Щоразу, коли ви думаєте про це, ви стаєте на крок ближче до відновлення. Також ви визначите свої короткострокові цілі на шляху до великих мрій і зробите всі свої цілі конкретними, оскільки ясні цілі сприяють більшим змінам, яких ми вам бажаємо.</p>
+                
+                <div class="module-header">
+                    <div class="circle-number">3</div>
+                    <h2 class="module-title">Вторинні вигоди</h2>
+                </div>
+                <p>У третій частині ми допоможемо вам усвідомити приховані мотиви, що знаходяться у вашому несвідомому та спонукають вас продовжувати використовувати співзалежні моделі поведінки, проаналізувати ці моделі, скласти план змін і розпочати з ним працювати.</p>
+                
+                <div class="module-header">
+                    <div class="circle-number">4</div>
+                    <h2 class="module-title">Когнітивна реконструкція</h2>
+                </div>
+                <p>Четверта частина навчить вас працювати з негативними думками, змінюючи звичне мислення так, щоб воно більш відповідало фактам та допомогало знижувати рівень стресу.</p>
+                <p>Процес когнітивної реконструкції допоможе вам мислити ясніше і, отже, ефективніше реагувати на проблеми, що виникають.</p>
+                <div class="highlight-box">
+                    <p>Усвідомлення своїх думок та їхня реструктуризація (основа КПТ) потребує зусиль та практики. Ви можете виявити, що навіть після засвоєння цих навичок, у вас знову виникають негативні автоматичні думки. Це цілком нормально. Завдання полягає в тому, щоб продовжити займатися реструктуризацією, аби згодом вам стало притаманне позитивне мислення.</p>
+                </div>
+                
+                <div class="module-header">
+                    <div class="circle-number">5</div>
+                    <h2 class="module-title">Комунікації</h2>
+                </div>
+                <p>У п'ятій частині тренінгу ми ринемо у саму суть здорового спілкування. Ви відкриєте потужні інструменти для ефективної комунікації, які перетворять будь-яку складну розмову на конструктивний діалог. Ми будемо вчитися конструктивно вирішувати проблеми та долати конфлікти, перетворюючи їх на ресурс для зростання ваших стосунків.</p>
+                <p>Ви опануєте мистецтво виставлення чітких і твердих меж із повагою до себе та інших, щоб позбутися токсичної комунікації та побудувати справді дорослі та рівні стосунки.</p>
+                
+                <div class="module-header">
+                    <div class="circle-number">6</div>
+                    <h2 class="module-title">Стресостійкість</h2>
+                </div>
+                <p>Багато людей зі співзалежністю не знають, як подбати про себе, а ця частина м'яко навчить вас цьому. Ознайомлюючись з завданнями, ви можете подумати: "Це занадто просто" або "Мені це не допоможе". Незважаючи на можливий внутрішній спротив, спробуйте, адже будь-які навички вимагають практики, перш ніж дійсно почнуть працювати.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="text-center py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5 class="mb-3">Школа незалежної сім'ї <span class="accent-text">ім. Олени Буланової</span></h5>
+                    <p>Професійна допомога сім'ям з проблемами співзалежності</p>
+                    <div class="mb-4">
+                        <h5><i class="bi bi-geo-alt-fill accent-text me-2"></i> Адреса</h5>
+                        <p>Київська обл., Васильківський район, село Погреби, вулиця Космічна 8а.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5 class="mb-3">Швидкі посилання</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-decoration-none text-light">Головна</a></li>
+                        <li><a href="index.html#contacts" class="text-decoration-none text-light">Контакти</a></li>
+                        <li><a href="co-dependency.html" class="text-decoration-none text-light">Про співзалежність</a></li>
+                        <li><a href="program.html" class="text-decoration-none text-light">Структура курсу</a></li>
+                        <li><a href="registration.html" class="text-decoration-none text-light">Реєстрація</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">Соціальні мережі</h5>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="https://www.instagram.com/djerelo.help/" class="text-light"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="https://t.me/ninarkotikam_bot" class="text-light"><i class="bi bi-telegram fs-4"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-facebook fs-4"></i></a>
+                    </div>
+                    <div class="mt-4">
+                        <h5><i class="bi bi-telephone-fill accent-text me-2"></i> Телефон</h5>
+                        <p>+38 (099) 258-74-84</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <p class="mb-0">&copy; 2025 Школа незалежної сім'ї ім. Олени Буланової. Всі права захищені.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Плавна прокрутка для якорних ссылок
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Добавляем тень на навбар при прокрутке
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

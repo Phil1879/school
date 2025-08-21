@@ -1,0 +1,100 @@
+:root {
+    --bg-color: #132450;
+    --text-color: #fffefd;
+    --accent-color: #ffcc2b;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.navbar {
+    background-color: rgba(19, 36, 80, 0.9);
+}
+
+.navbar .nav-link.active {
+    color: var(--accent-color) !important;
+    font-weight: 600;
+}
+
+.btn-accent {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    font-weight: 600;
+    border: none;
+    padding: 10px 25px;
+}
+
+.btn-accent:hover {
+    background-color: #e6b825;
+    color: var(--bg-color);
+}
+
+.accent-text {
+    color: var(--accent-color);
+}
+
+.hero-section {
+    padding: 100px 0;
+    background-color: var(--bg-color);
+}
+
+.contact-form {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.25rem rgba(255, 204, 43, 0.25);
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 30px 0;
+}
+
+.specialist-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.testimonial-carousel {
+    padding: 40px 0;
+}
+
+.carousel-item {
+    padding: 20px;
+}
+
+.testimonial-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}
