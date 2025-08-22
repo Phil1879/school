@@ -11,15 +11,6 @@ body {
     line-height: 1.6;
 }
 
-.navbar {
-    background-color: rgba(19, 36, 80, 0.9);
-}
-
-.navbar .nav-link.active {
-    color: var(--accent-color) !important;
-    font-weight: 600;
-}
-
 .btn-accent {
     background-color: var(--accent-color);
     color: var(--bg-color);
@@ -264,4 +255,50 @@ footer {
     .content-section h2 {
         font-size: 1.5rem;
     }
+}
+/* Nav */
+/* Стили для навбара с логотипом */
+.navbar-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    .navbar-brand {
+        max-width: 70%;
+    }
+    
+    .brand-text {
+        font-size: 0.9rem;
+    }
+    
+    .navbar-logo {
+        width: 35px;
+        height: 35px;
+        margin-right: 8px;
+    }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 576px) {
+    .navbar-brand {
+        max-width: 60%;
+    }
+    
+    .brand-text {
+        font-size: 0.8rem;
+    }
+}
+
+.navbar {
+    background-color: rgba(19, 36, 80, 0.9);
+}
+
+.navbar .nav-link.active {
+    color: var(--accent-color) !important;
+    font-weight: 600;
 }
