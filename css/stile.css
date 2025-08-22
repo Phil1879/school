@@ -216,9 +216,10 @@ footer {
 }
 
 .content-section h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 1.5rem;
     color: var(--accent-color);
+    text-align: center;
 }
 
 .content-section h2 {
@@ -301,4 +302,116 @@ footer {
 .navbar .nav-link.active {
     color: var(--accent-color) !important;
     font-weight: 600;
+}
+/* Кнопка звонка - заявки */
+/* Кнопка звонка */
+.vidualsatun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: animate_pulse2 2s infinite; 
+  border-radius: 100px;
+}
+
+.campakesad, .vebusines, .nigkugas {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+}
+.vebusines {
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+}
+.campakesad {
+  background: #e6b825;
+  position: relative;
+  transition: .5s;
+}
+.nigkugas {
+  font-size: 28px;
+  line-height: 70px;
+  animation: phone .9s ease-in-out infinite;
+}
+.dsacin {
+  position: absolute;
+  opacity: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+  top: 18px;
+  font-size: 12px;
+  transform: scaleX(-1);
+  transition: .5s ease-in-out;
+}
+.nigkugas i {
+  transition: .5s ease-in-out;
+}
+.campakesad:hover {
+  background: #e6b825;
+}
+.campakesad:hover i {
+  transition: .5s ease-in-out;
+  transform: scale(0);
+}
+.campakesad:hover .dsacin {
+  transform: scaleX(1);
+  transition: .5s ease-in-out;
+  opacity: 1;
+}
+
+.campakesad:hover::before,
+.campakesad:hover::after {
+  content: '';
+  position: absolute;
+  border: 1px solid #e6b825;
+  left: -20px;
+  right: -20px;
+  top: -20px;
+  bottom: -20px;
+  border-radius: 50%;
+  animation: pulse 1.8s linear infinite;
+  opacity: 0;
+}
+.campakesad:hover::after {
+  animation-delay: .5s;
+ 
+}
+
+@keyframes phone {
+  0%, 100% {
+  transform: rotate(-20deg);
+  }
+  50% {
+  transform: rotate(21deg);
+  }
+}
+@keyframes pulse {
+  0% {
+  transform: scale(0.5);
+  opacity: 0;
+  }
+  50% {
+  opacity: 1;
+  }
+  100% {
+  transform: scale(1.2);
+  opacity: 0;
+  }
+  
+}
+
+@keyframes animate_pulse2 {
+  0% {
+    box-shadow: 0 0 0 0 rgba(230, 184, 37, 0.67); /* было rgba(0, 189, 31, 0.67) */
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(230, 184, 37, 0.27); /* было rgba(0, 189, 31, 0.27) */
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(230, 184, 37, 0.17); /* было rgba(0, 189, 31, 0.17) */
+  }
 }
