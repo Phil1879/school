@@ -25,3 +25,15 @@ window.addEventListener('scroll', function() {
         navbar.style.boxShadow = 'none';
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.querySelector('video');
+    if (video) {
+        video.autoplay = false;
+        video.pause();
+        
+        // Дополнительная защита от автовоспроизведения
+        video.removeAttribute('autoplay');
+        video.setAttribute('data-autoplay', 'false');
+    }
+});
