@@ -258,7 +258,10 @@ footer {
     }
 }
 /* Nav */
-/* Стили для навбара с логотипом */
+.brand-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
 .navbar-logo {
     width: 40px;
     height: 40px;
@@ -274,7 +277,8 @@ footer {
     }
     
     .brand-text {
-        font-size: 0.9rem;
+        font-size: 1.3rem;
+        font-weight: 600;
     }
     
     .navbar-logo {
@@ -289,10 +293,6 @@ footer {
     .navbar-brand {
         max-width: 60%;
     }
-    
-    .brand-text {
-        font-size: 0.8rem;
-    }
 }
 
 .navbar {
@@ -304,7 +304,6 @@ footer {
     font-weight: 600;
 }
 /* Кнопка звонка - заявки */
-/* Кнопка звонка */
 .vidualsatun {
   position: absolute;
   top: 50%;
