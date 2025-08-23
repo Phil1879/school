@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Відгуки - Школа незалежної сім'ї</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        .testimonials-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #132450 0%, #1c326d 100%);
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 15px;
+            height: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ffcc2b;
+            margin-right: 15px;
+        }
+        
+        .testimonial-info {
+            flex: 1;
+        }
+        
+        .testimonial-name {
+            font-weight: 600;
+            color: #ffcc2b;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-date {
+            color: #ccc;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        .testimonial-stars {
+            margin-bottom: 15px;
+        }
+        
+        .star {
+            color: #ffcc2b;
+            margin-right: 3px;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-text {
+            color: #fff;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .testimonial-content {
+            max-height: 120px;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .testimonial-content.expanded {
+            max-height: 500px;
+        }
+        
+        .read-more-btn {
+            background: none;
+            border: none;
+            color: #ffcc2b;
+            cursor: pointer;
+            font-size: 0.9rem;
+            padding: 5px 0;
+            display: inline-flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+        
+        .read-more-btn:hover {
+            color: #e6b825;
+        }
+        
+        .read-more-btn i {
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+        
+        .read-more-btn.expanded i {
+            transform: rotate(180deg);
+        }
+        
+        .gradient-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40px;
+            background: linear-gradient(transparent, rgba(19, 36, 80, 0.8));
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gradient-overlay.hidden {
+            opacity: 0;
+        }
+        
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 204, 43, 0.8);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        
+        .carousel-control-prev {
+            left: -25px;
+        }
+        
+        .carousel-control-next {
+            right: -25px;
+        }
+        
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            opacity: 1;
+        }
+        
+        .carousel-indicators {
+            bottom: -50px;
+        }
+        
+        .carousel-indicators button {
+            background-color: #ffcc2b;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .testimonial-card {
+                margin: 10px;
+                padding: 20px;
+            }
+            
+            .testimonial-avatar {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .carousel-control-prev {
+                left: -20px;
+            }
+            
+            .carousel-control-next {
+                right: -20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Секция отзывов -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="text-center text-white mb-5">Відгуки наших учнів</h2>
+            
+            <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Отзыв 1 -->
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-header">
+                                        <img src="https://school.ninarkotikam.com/wp-content/uploads/2025/01/IMG_8395-120x120.jpg" 
+                                             alt="Іванова Анна" class="testimonial-avatar">
+                                        <div class="testimonial-info">
+                                            <div class="testimonial-name">Іванова Анна</div>
+                                            <div class="testimonial-date">29. January, 2025</div>
+                                            <div class="testimonial-stars">
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <div class="testimonial-content">
+                                            <p>Мені сподобалась школа ти що все пояснювали як дітям. Дуже гарний зворотній зв'язок. Дякую вам за таку роботу. Зернятко покладено, а далі все в моїх руках.</p>
+                                        </div>
+                                        <div class="gradient-overlay"></div>
+                                    </div>
+                                    <button class="read-more-btn">
+                                        Читати далі <i class="bi bi-chevron-down"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-header">
+                                        <img src="https://cdn.trustindex.io/assets/default-avatar/noprofile-06.svg" 
+                                             alt="Марина Ковтуненко" class="testimonial-avatar">
+                                        <div class="testimonial-info">
+                                            <div class="testimonial-name">Марина Ковтуненко</div>
+                                            <div class="testimonial-date">30. January, 2025</div>
+                                            <div class="testimonial-stars">
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <div class="testimonial-content">
+                                            <p>Благодарю ШКОЛУ НЕЗАВИСИМОЙ СЕМЬИ, за то что помогла увидеть со стороны качество моей жизни, своё поведение с родными и окружающими, своё отношение ко всему и вся...</p>
+                                        </div>
+                                        <div class="gradient-overlay"></div>
+                                    </div>
+                                    <button class="read-more-btn">
+                                        Читати далі <i class="bi bi-chevron-down"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Отзыв 2 -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-header">
+                                        <img src="https://cdn.trustindex.io/assets/default-avatar/noprofile-06.svg" 
+                                             alt="Шестакова Світлана" class="testimonial-avatar">
+                                        <div class="testimonial-info">
+                                            <div class="testimonial-name">Шестакова Світлана</div>
+                                            <div class="testimonial-date">30. January, 2025</div>
+                                            <div class="testimonial-stars">
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <div class="testimonial-content">
+                                            <p>Благодарю ШКОЛУ НЕЗАВИСИМОЙ СЕМЬИ, за то что помогла увидеть со стороны качество моей жизни, своё поведение с родными и окружающими, своё отношение ко всему и вся.<br>Например: там где я считала, что права,оказалась совсем не права; там где думала, что должна, оказалось это не моя ответственность; что считала благим делом, оказалось медвежьей услугой и т.д.<br><br>Благодаря школе, моя жизнь стала легче и прекраснее. Урегулировались отношения с родными близкими и окружающими людьми.<br>Я увидела выход и бег по кругу</p>
+                                        </div>
+                                        <div class="gradient-overlay"></div>
+                                    </div>
+                                    <button class="read-more-btn">
+                                        Читати далі <i class="bi bi-chevron-down"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-header">
+                                        <img src="https://cdn.trustindex.io/assets/default-avatar/noprofile-06.svg" 
+                                             alt="Олег Літвінов" class="testimonial-avatar">
+                                        <div class="testimonial-info">
+                                            <div class="testimonial-name">Олег Літвінов</div>
+                                            <div class="testimonial-date">30. January, 2025</div>
+                                            <div class="testimonial-stars">
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <div class="testimonial-content">
+                                            <p>На первых занятиях это был просто интерес, а вот потом когда начались домашние задания вот здесь и началось что называется "разбор полётов" это анализ, самоанализ...</p>
+                                        </div>
+                                        <div class="gradient-overlay"></div>
+                                    </div>
+                                    <button class="read-more-btn">
+                                        Читати далі <i class="bi bi-chevron-down"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Добавьте больше отзывов по аналогии -->
+                </div>
+                
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                    <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Функция для разворачивания/сворачивания текста
+        document.querySelectorAll('.read-more-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const content = this.previousElementSibling.querySelector('.testimonial-content');
+                const overlay = this.previousElementSibling.querySelector('.gradient-overlay');
+                
+                content.classList.toggle('expanded');
+                overlay.classList.toggle('hidden');
+                this.classList.toggle('expanded');
+                
+                if (this.classList.contains('expanded')) {
+                    this.innerHTML = 'Згорнути <i class="bi bi-chevron-up"></i>';
+                } else {
+                    this.innerHTML = 'Читати далі <i class="bi bi-chevron-down"></i>';
+                }
+            });
+        });
+
+        // Автоматическая высота для карточек в одном ряду
+        function equalizeCardHeights() {
+            document.querySelectorAll('.carousel-item').forEach(item => {
+                const cards = item.querySelectorAll('.testimonial-card');
+                let maxHeight = 0;
+                
+                cards.forEach(card => {
+                    card.style.height = 'auto';
+                    maxHeight = Math.max(maxHeight, card.offsetHeight);
+                });
+                
+                cards.forEach(card => {
+                    card.style.height = maxHeight + 'px';
+                });
+            });
+        }
+
+        // Вызываем при загрузке и изменении размера окна
+        window.addEventListener('load', equalizeCardHeights);
+        window.addEventListener('resize', equalizeCardHeights);
+        
+        // Обновляем высоту при смене слайдов
+        document.getElementById('testimonialsCarousel').addEventListener('slid.bs.carousel', equalizeCardHeights);
+    </script>
+</body>
+</html>
